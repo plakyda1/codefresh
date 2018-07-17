@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+.block{
+  &-header{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+  }
+}
+
+.list{
+  transition: background-color 0.5s;
+  &__item{
+    display: flex;
+    justify-content: space-between;
+    background-color: #fafafa;
+    padding: 5px 5px 5px 10px;
+    margin: 5px 0;
+    font-size: 16px;
+    text-align: left;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    &:hover{
+      background-color: #ececec;
+    }
+  }
+}
+.textarea-yaml{
+  min-height: 500px;
+}
+.info{
+  padding: 50px 0;
+  color: #cccccc;
+}

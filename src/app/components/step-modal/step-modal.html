@@ -1,0 +1,33 @@
+<div class="modal-header">
+  <h3 class="modal-title" id="modal-title">Step</h3>
+</div>
+<div class="modal-body" id="modal-body">
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="form-group">
+        <label>Step name (key)</label>
+        <input type="text" class="form-control" required ng-model="app.state.key"/>
+        <label>Title</label>
+        <input type="text" class="form-control" required ng-model="app.state.details.title"/>
+        <label>Image</label>
+        <input type="text" class="form-control" required ng-model="app.state.details.image"/>
+        <label>Commands</label>
+        <div class="command" ng-repeat="sc in app.state.details.commands track by $index" >
+          <div class="input-group">
+            <div class="form-group has-feedback has-clear">
+              <input type="text" class="form-control" ng-model="app.state.details.commands[$index]" placeholder="Enter command">
+            </div>
+            <span class="input-group-btn">
+              <button type="button" class="btn btn-danger" ng-click="app.removeCommand($index)"><span class="glyphicon glyphicon-remove"></span></button>
+            </span>
+          </div>
+        </div>
+        <button type="button" class="btn btn-default" ng-click="app.addNewCommand()">Add Command to step</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal-footer">
+  <button class="btn btn-primary" type="button" ng-click="app.ok()">OK</button>
+  <button class="btn btn-warning" type="button" ng-click="app.cancel()">Cancel</button>
+</div>
